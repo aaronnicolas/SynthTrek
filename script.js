@@ -1,29 +1,47 @@
-function displayAttackFeedback(damage, effect = null) {
-  // Get the damage output element
-  const damageOutput = document.getElementById("damage-output");
-
-  // Animate the damage output (pop effect)
-  damageOutput.classList.add('pop-animation');
-
-  // Show the feedback in the output
-  if (effect) {
-      damageOutput.textContent = effect; // Display the attack's effect if provided
-  } else {
-      damageOutput.textContent = `${damage} damage!`; // Default to damage feedback
+function displayAttackFeedback(damage) {
+    // Get the damage output element
+    const damageOutput = document.getElementById("damage-output");
+    
+    // Animate the damage output (pop effect)
+    damageOutput.classList.add('pop-animation');
+    
+    // Show damage in the output
+    damageOutput.textContent = `${damage} damage!`;
+  
+    // Reset the animation after it finishes
+    setTimeout(() => {
+      damageOutput.classList.remove('pop-animation');
+    }, 500); // Reset after 500ms
+    
+    // Optional: Change background color temporarily for extra emphasis
+    damageOutput.classList.add('damage-feedback');
+    setTimeout(() => {
+      damageOutput.classList.remove('damage-feedback');
+    }, 1000); // Feedback duration (1 second)
   }
 
-  // Reset the animation after it finishes
-  setTimeout(() => {
+  function displayEffectFeedback(effect = null) {
+    // Get the damage output element
+    const damageOutput = document.getElementById("damage-output");
+    
+    // Animate the damage output (pop effect)
+    damageOutput.classList.add('pop-animation');
+    
+    // Show damage in the output
+    damageOutput.textContent = effect;
+  
+    // Reset the animation after it finishes
+    setTimeout(() => {
       damageOutput.classList.remove('pop-animation');
-  }, 500); // Reset after 500ms
-
-  // Optional: Change background color temporarily for extra emphasis
-  damageOutput.classList.add('damage-feedback');
-  setTimeout(() => {
+    }, 500); // Reset after 500ms
+    
+    // Optional: Change background color temporarily for extra emphasis
+    damageOutput.classList.add('damage-feedback');
+    setTimeout(() => {
       damageOutput.classList.remove('damage-feedback');
-  }, 1000); // Feedback duration (1 second)
-}
-
+    }, 1000); // Feedback duration (1 second)
+  }
+  
   document.addEventListener("DOMContentLoaded", () => {
     const enemyData = {
       xorathian: {
@@ -151,10 +169,12 @@ function displayAttackFeedback(damage, effect = null) {
           button.disabled = true;
           setTimeout(() => button.disabled = false, 1000); // 1-second cooldown
           
-          if (attack.effect) {
-            displayAttackFeedback(null, attack.effect); // Displays the effect with animation and feedback.
-          } else {
-              displayAttackFeedback(damage); // Displays the damage.
+          if (attack.damage) {
+            const damage = generateRandomDamage(attack.damage[0], attack.damage[1]);
+            displayAttackFeedback(damage);  // Call to display feedback
+          } else if (attack.effect) {
+            // damageOutput.textContent = attack.effect;
+            displayEffectFeedback(attack.effect);
           }
         };
         
