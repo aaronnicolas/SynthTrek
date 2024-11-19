@@ -163,7 +163,7 @@ select:focus {
     }
     
     #damage-output {
-        font-size: 1.25rem; /* Slightly larger text on mobile */
+        font-size: 1.05rem; /* Slightly larger text on mobile */
     }
 }
 
