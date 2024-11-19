@@ -293,20 +293,24 @@ select:focus {
 
 /* Disable button hover effects for touch devices */
 @media (hover: none) {
-    .attack-options button:hover {
+    /* .attack-options button:hover {
         background-color: #3D3F54; /* Reset to default */
-    }
-
-    .attack-options button:active {
-        transform: scale(0.98);
-        /* Scaling button to 0.98 to its original size */
-        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-        /* Lowering the shadow */
-    }
+    /* } */
 
     /* Disable button disabled styles for touch devices */
     .attack-options button:disabled {
         background-color: #555; /* Reset to default */
         cursor: default; /* Reset to default */
+    }
+}
+
+/* Button Pressed Style for Mobile or Tablet */
+@media (pointer: coarse) {
+    .attack-options button:active {
+        transform: scale(0.95); /* Shrink the button slightly */
+        background-color: #2A2C40; /* Darken the button color */
+        box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.6); /* Inner shadow for a pressed look */
+        color: #d1d1d1; /* Lighten the text slightly */
+        transition: transform 0.1s, background-color 0.1s, box-shadow 0.1s; /* Smooth effect */
     }
 }
