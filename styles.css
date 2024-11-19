@@ -293,9 +293,9 @@ select:focus {
 
 /* Disable button hover effects for touch devices */
 @media (hover: none) {
-    /* .attack-options button:hover {
+    .attack-options button:hover {
         background-color: #3D3F54; /* Reset to default */
-    /* } */
+    }
 
     /* Disable button disabled styles for touch devices */
     .attack-options button:disabled {
@@ -307,10 +307,10 @@ select:focus {
 /* Button Pressed Style for Mobile or Tablet */
 @media (pointer: coarse) {
     .attack-options button:active {
-        transform: scale(0.95); /* Shrink the button slightly */
-        background-color: #2A2C40; /* Darken the button color */
-        box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.6); /* Inner shadow for a pressed look */
-        color: #d1d1d1; /* Lighten the text slightly */
-        transition: transform 0.1s, background-color 0.1s, box-shadow 0.1s; /* Smooth effect */
+        transform: scale(0.95); /* Shrink the button slightly when pressed */
+        background-color: #2A2C40; /* Darker button color for pressed state */
+        box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.6); /* Inner shadow for pressed effect */
+        color: #d1d1d1; /* Lighten the text */
+        transition: transform 0.1s, background-color 0.1s, box-shadow 0.1s; /* Smooth transition */
     }
 }
