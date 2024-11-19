@@ -1,5 +1,3 @@
-// Inside the script.js
-
 function displayAttackFeedback(damage) {
     // Get the damage output element
     const damageOutput = document.getElementById("damage-output");
@@ -166,6 +164,10 @@ function displayAttackFeedback(damage) {
   
     // Update UI on enemy change
     enemyTypeSelect.addEventListener("change", (e) => {
+      // Reset the damage output to an instruction when changing enemy
+      damageOutput.textContent = "Pick an attack";
+
+      // Render attack buttons for the selected enemy
       renderAttackButtons(e.target.value);
     });
-  });  
+});  

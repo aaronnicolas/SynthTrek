@@ -15,6 +15,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
+    font-size: 16px; /* Default font size */
 }
 
 /* Main App Container */
@@ -32,7 +33,7 @@ body {
 
 /* Header */
 header h1 {
-    font-size: 28px;
+    font-size: 1.75rem; /* Relative font size for better scalability */
     color: #00B5E2; /* Bright cyan for the header */
     text-align: center;
     margin-bottom: 16px;
@@ -45,7 +46,7 @@ header h1 {
 }
 
 .enemy-selector label {
-    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 8px;
     display: block;
 }
@@ -53,7 +54,7 @@ header h1 {
 select {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
+    font-size: 1rem;
     border: 1px solid #444;
     border-radius: 8px;
     background-color: #333;
@@ -90,8 +91,9 @@ select:focus {
     min-width: 120px; /* Ensure a minimum button width */
     max-width: 220px; /* Ensure a maximum button width */
     text-overflow: ellipsis; /* Prevent overflow with ellipsis */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowing text */
+    white-space: normal; /* Allow the text to wrap */
+    overflow: hidden; /* Prevent any overflow */
+    word-wrap: break-word; /* Ensure long words break and don't overflow */
 }
 
 .attack-options button:hover {
@@ -115,13 +117,13 @@ select:focus {
 }
 
 .output h2 {
-    font-size: 20px;
+    font-size: 1.25rem; /* Adjusted title size */
     margin-bottom: 12px;
     color: #B5B5B5; /* Slightly lighter color for titles */
 }
 
 #damage-output {
-    font-size: 36px;
+    font-size: 1rem; /* Larger font size for damage output */
     font-weight: bold;
     color: #FF5B77; /* Bright pinkish red for damage output */
     margin-top: 10px;
@@ -132,9 +134,41 @@ select:focus {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
+    /* Adjust the overall font size and layout for tablet */
+    body {
+        font-size: 14px;
+    }
+    
+    #app {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
     .attack-options button {
-        flex: 1 1 100%;
+        flex: 1 1 48%;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    /* Mobile view adjustments */
+    .attack-options button {
+        flex: 1 1 100%; /* Stack buttons vertically */
+        font-size: 1rem;
+    }
+    
+    #damage-output {
+        font-size: 1.5rem; /* Slightly smaller text on mobile */
+        padding: 8px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem; /* Smaller header font on mobile */
+    }
+    
+    .enemy-selector label {
+        font-size: 0.875rem; /* Smaller label font size */
     }
 }
 
@@ -175,4 +209,17 @@ select:focus {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+/* Subtle Instructional Styles for Damage Output */
+#damage-output.instruction-text {
+    background-color: #2C2F3A; /* Keep the background neutral */
+    color: grey; /* Use a soft red for emphasis */
+    font-size: 18px; /* Slightly larger text */
+    font-weight: 600; /* Bold for emphasis */
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
 }
