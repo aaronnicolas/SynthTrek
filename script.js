@@ -1,24 +1,24 @@
-function displayAttackFeedback(damage) {
-    // Get the damage output element
-    const damageOutput = document.getElementById("damage-output");
-    
-    // Animate the damage output (pop effect)
-    damageOutput.classList.add('pop-animation');
-    
-    // Show damage in the output
-    damageOutput.textContent = `${damage} damage!`;
-  
-    // Reset the animation after it finishes
-    setTimeout(() => {
+function displayAttackFeedback(damage, attack) {
+  // Get the damage output element
+  const damageOutput = document.getElementById("damage-output");
+
+  // Animate the damage output (pop effect)
+  damageOutput.classList.add('pop-animation');
+
+  // Show damage in the output
+  damageOutput.textContent = `${attack.name} dealt ${damage} damage!`;
+
+  // Reset the animation after it finishes
+  setTimeout(() => {
       damageOutput.classList.remove('pop-animation');
-    }, 500); // Reset after 500ms
-    
-    // Optional: Change background color temporarily for extra emphasis
-    damageOutput.classList.add('damage-feedback');
-    setTimeout(() => {
+  }, 500); // Reset after 500ms
+
+  // Optional: Change background color temporarily for extra emphasis
+  damageOutput.classList.add('damage-feedback');
+  setTimeout(() => {
       damageOutput.classList.remove('damage-feedback');
-    }, 1000); // Feedback duration (1 second)
-  }
+  }, 1000); // Feedback duration (1 second)
+}
 
   function displayEffectFeedback(effect = null) {
     // Get the damage output element
@@ -159,28 +159,27 @@ function displayAttackFeedback(damage) {
     function renderAttackButtons(enemyKey) {
       attackOptionsDiv.innerHTML = "";
       const enemy = enemyData[enemyKey];
-  
+
       enemy.attacks.forEach((attack, index) => {
-        const button = document.createElement("button");
-        button.textContent = attack.name;
-        
-        button.onclick = () => {
-          // Disable button temporarily (cooldown)
-          button.disabled = true;
-          setTimeout(() => button.disabled = false, 1000); // 1-second cooldown
-          
-          if (attack.damage) {
-            const damage = generateRandomDamage(attack.damage[0], attack.damage[1]);
-            displayAttackFeedback(damage);  // Call to display feedback
-          } else if (attack.effect) {
-            // damageOutput.textContent = attack.effect;
-            displayEffectFeedback(attack.effect);
-          }
-        };
-        
-        attackOptionsDiv.appendChild(button);
+          const button = document.createElement("button");
+          button.textContent = attack.name;
+
+          button.onclick = () => {
+              // Disable button temporarily (cooldown)
+              button.disabled = true;
+              setTimeout(() => (button.disabled = false), 1000); // 1-second cooldown
+
+              if (attack.damage) {
+                  const damage = generateRandomDamage(attack.damage[0], attack.damage[1]);
+                  displayAttackFeedback(damage, attack); // Pass attack object to the feedback function
+              } else if (attack.effect) {
+                  displayEffectFeedback(attack.effect);
+              }
+          };
+
+          attackOptionsDiv.appendChild(button);
       });
-    }
+  }
   
     // Initialize with the first enemy
     renderAttackButtons("xorathian");
