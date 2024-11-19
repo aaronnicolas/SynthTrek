@@ -295,7 +295,7 @@ select:focus {
 @media (hover: none) {
     .attack-options button:hover {
         background-color: #3D3F54; /* Reset to default */
-        transform: none; /* Remove scaling */
+        transform: scale(1.05); /* Slight scaling effect after click */
     }
 
     /* Disable button disabled styles for touch devices */
