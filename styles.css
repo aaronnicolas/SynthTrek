@@ -297,4 +297,10 @@ select:focus {
         background-color: #3D3F54; /* Reset to default */
         transform: none; /* Remove scaling */
     }
+
+    /* Disable button disabled styles for touch devices */
+    .attack-options button:disabled {
+        background-color: #555; /* Reset to default */
+        cursor: default; /* Reset to default */
+    }
 }
