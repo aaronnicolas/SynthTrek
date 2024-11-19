@@ -290,3 +290,11 @@ select:focus {
     text-align: center;
     transition: all 0.3s ease;
 }
+
+/* Disable button hover effects for touch devices */
+@media (hover: none) {
+    .attack-options button:hover {
+        background-color: #3D3F54; /* Reset to default */
+        transform: none; /* Remove scaling */
+    }
+}
