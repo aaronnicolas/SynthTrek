@@ -210,7 +210,7 @@ select:focus {
     }
     
     #damage-output {
-        font-size: 1.15rem; /* Larger text for iPads */
+        font-size: 1.10rem; /* Larger text for iPads */
     }
 }
 
