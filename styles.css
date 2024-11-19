@@ -133,11 +133,66 @@ select:focus {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    /* Adjust the overall font size and layout for tablet */
+/* Mobile and iPhone-Specific Responsiveness */
+@media (max-width: 375px) {
+    /* iPhone SE, iPhone 8 and smaller devices */
     body {
         font-size: 14px;
+    }
+    
+    #app {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem; /* Smaller header font on small iPhones */
+    }
+    
+    .enemy-selector label {
+        font-size: 0.875rem; /* Smaller font for labels */
+    }
+    
+    select {
+        font-size: 0.875rem; /* Slightly smaller font size for select elements */
+    }
+    
+    .attack-options button {
+        flex: 1 1 100%; /* Stack buttons vertically */
+        font-size: 1rem;
+    }
+    
+    #damage-output {
+        font-size: 1.25rem; /* Slightly larger text on mobile */
+    }
+}
+
+/* Medium iPhones (iPhone 12/13/14/15 - 375px - 430px) */
+@media (max-width: 430px) {
+    /* For medium-sized iPhones */
+    body {
+        font-size: 15px;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .attack-options button {
+        flex: 1 1 48%; /* Two columns for buttons */
+        font-size: 1rem;
+    }
+    
+    #damage-output {
+        font-size: 1.25rem; /* Slightly larger text on mobile */
+    }
+}
+
+/* iPads (Portrait Mode) */
+@media (max-width: 768px) {
+    /* For all iPad Portrait Screens */
+    body {
+        font-size: 16px;
     }
     
     #app {
@@ -145,31 +200,42 @@ select:focus {
         padding: 15px;
     }
     
-    .attack-options button {
-        flex: 1 1 48%;
-        font-size: 1rem;
-        max-width: 100%;
+    header h1 {
+        font-size: 1.75rem;
     }
-}
-
-@media (max-width: 500px) {
-    /* Mobile view adjustments */
+    
     .attack-options button {
-        flex: 1 1 100%; /* Stack buttons vertically */
+        flex: 1 1 48%; /* Buttons in two columns */
         font-size: 1rem;
     }
     
     #damage-output {
-        font-size: 1.5rem; /* Slightly smaller text on mobile */
-        padding: 8px;
+        font-size: 1.5rem; /* Larger text for iPads */
+    }
+}
+
+/* iPads (Landscape Mode) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* For all iPad Landscape Screens */
+    body {
+        font-size: 16px;
+    }
+    
+    #app {
+        padding: 20px;
     }
     
     header h1 {
-        font-size: 1.5rem; /* Smaller header font on mobile */
+        font-size: 1.75rem;
     }
     
-    .enemy-selector label {
-        font-size: 0.875rem; /* Smaller label font size */
+    .attack-options button {
+        flex: 1 1 48%; /* Buttons in two columns */
+        font-size: 1rem;
+    }
+    
+    #damage-output {
+        font-size: 1.5rem;
     }
 }
 
