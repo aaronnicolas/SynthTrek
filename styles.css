@@ -314,3 +314,55 @@ select:focus {
         transition: transform 0.1s, background-color 0.1s, box-shadow 0.1s; /* Smooth transition */
     }
 }
+
+h1 {
+    color: #00B5E2;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #181824; /* Dark background for the page */
+    color: #E0E0E0; /* Soft white text */
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-size: 16px; /* Default font size */
+}
+
+button {
+    background-color: #3D3F54; /* Button base color */
+    color: #E0E0E0;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1 1 48%;
+    transition: background-color 0.3s, transform 0.3s;
+    min-width: 120px; /* Ensure a minimum button width */
+    max-width: 220px; /* Ensure a maximum button width */
+    text-overflow: ellipsis; /* Prevent overflow with ellipsis */
+    white-space: normal; /* Allow the text to wrap */
+    overflow: hidden; /* Prevent any overflow */
+    word-wrap: break-word; /* Ensure long words break and don't overflow */;
+}
+
+button:hover {
+    background-color: #00B5E2;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+button.cooldown {
+    background-color: #555;
+}
+
+p {
+    padding-left: 50px;
+    padding-right: 50px;
+}

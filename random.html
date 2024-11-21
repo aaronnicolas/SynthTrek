@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enemy Attack Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Enemy Attack Generator</h1>
+    </header>
+
+    <main>
+      <!-- Enemy Type Selection -->
+      <div class="enemy-selector">
+        <label for="enemy-type">Select Enemy:</label>
+        <select id="enemy-type">
+            <option value="xorathian">Xorathian</option>
+            <option value="cyclops">Mechanoid Cyclops</option>
+            <option value="veldraxi">Veldraxi</option>
+            <option value="mindflayer">Mindflayer</option>
+            <option value="eldritch_spawn">Eldritch Spawn</option>
+            <option value="infected_wretch">Infected Wretch</option>
+            <option value="vile_abomination">Vile Abomination</option>
+            <option value="ravaging_phantasmals">Ravaging Phantasmals</option>
+            <option value="expurge">Expurge</option>
+            <option value="eye_from_faraway">Eye from Faraway</option>
+            <option value="rouge_nexus_machine">Rouge Nexus Machine</option>
+            <option value="cyanox_sentry">Cyanox Sentry</option>
+            <option value="orcish_captive">Orcish Captive</option>
+            <option value="infernal_cinder">Infernal Cinder</option>
+            <option value="neurovoid">Neurovoid</option>
+        </select>
+      </div>
+
+      <!-- Attack Buttons -->
+      <div class="attack-options" id="attack-options"></div>
+
+      <!-- Output Display -->
+      <div class="output">
+        <h2>Attack Damage:</h2>
+        <p id="damage-output">-</p>
+      </div>
+    </main>
+    <br>
+    <a href="index.html">
+      <button>Main Menu</button>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
