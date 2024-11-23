@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #181824; 
+}
+
+.main-title {
+    color: #00B5E2;
+    height: 100vh;
+    text-align: center;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    padding: 20px 0;
+    position: center;
+    z-index: 1;
+    display: flex;
+}
+
+/* h1 style */
+.SynthTrek {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Style for the split screen */
+.game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh; /* Full viewport height for split screen */
+}
+
+.split {
+    flex: 1; /* Equal width for left and right sections */
+    overflow: auto; /* Handle overflow content */
+}
+
+.split.left {
+    background-color: #2e3238; 
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.split.right {
+    background-color: #0092ca; /* Light gray background for right side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered {
+    text-align: center;
+    max-width: 80%; /* Control content width */
+    margin: auto;
+}
+
+#Start {
+    font-size: 30px;
+}
+
+button {
+    background-color: #3D3F54;
+    font-size: 50px;
+    color: #E0E0E0;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1 1 48%;
+    transition: background-color 0.3s, transform 0.3s;
+    min-width: 120px; 
+    max-width: 220px; 
+    text-overflow: ellipsis; 
+    white-space: normal; 
+    overflow: hidden; 
+    word-wrap: break-word; 
+}
+
+button:hover {
+    background-color: #00B5E2;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+button.cooldown {
+    background-color: #555;
+}
+
+p {
+    font-size: large;
+    color: #E0E0E0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.rule-book {
+    position: center;
+    background-color: #181824; 
+    color: #E0E0E0;
+    justify-content: center;
+}
+
+.credits {
+    background-color: #2e3238;
+    color: #E0E0E0;
+    display: grid;
+    text-align: center;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.producer {
+    grid-column: span 2;
+}
+
+.left-side-credits {
+    grid-column: 1;
+}
+
+.right-side-credits {
+    grid-column: 2;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+

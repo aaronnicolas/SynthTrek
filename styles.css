@@ -315,23 +315,9 @@ select:focus {
     }
 }
 
-h1 {
-    color: #00B5E2;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #181824; /* Dark background for the page */
-    color: #E0E0E0; /* Soft white text */
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    font-size: 16px; /* Default font size */
-}
-
 button {
-    background-color: #3D3F54; /* Button base color */
+    background-color: #3D3F54;
+    font-size: 50px;
     color: #E0E0E0;
     padding: 12px 24px;
     font-size: 16px;
@@ -340,12 +326,12 @@ button {
     cursor: pointer;
     flex: 1 1 48%;
     transition: background-color 0.3s, transform 0.3s;
-    min-width: 120px; /* Ensure a minimum button width */
-    max-width: 220px; /* Ensure a maximum button width */
-    text-overflow: ellipsis; /* Prevent overflow with ellipsis */
-    white-space: normal; /* Allow the text to wrap */
-    overflow: hidden; /* Prevent any overflow */
-    word-wrap: break-word; /* Ensure long words break and don't overflow */;
+    min-width: 120px; 
+    max-width: 220px; 
+    text-overflow: ellipsis; 
+    white-space: normal; 
+    overflow: hidden; 
+    word-wrap: break-word; 
 }
 
 button:hover {
@@ -360,9 +346,4 @@ button:disabled {
 
 button.cooldown {
     background-color: #555;
-}
-
-p {
-    padding-left: 50px;
-    padding-right: 50px;
 }
