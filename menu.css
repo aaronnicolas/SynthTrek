@@ -110,6 +110,16 @@ p {
     justify-content: center;
 }
 
+iframe {
+    display: block; /* Removes inline space */
+    width: 900pt; /* Full viewport width */
+    height: 500pt; /* Full viewport height */
+    border: none; /* Remove border */
+    margin: 0; /* Prevent any additional margin */
+    padding: 0;
+    border-radius: 15px;
+}
+
 .credits {
     background-color: #2e3238;
     color: #E0E0E0;
