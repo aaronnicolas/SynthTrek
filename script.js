@@ -153,27 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
       hp: 15,
       attacks: [{ name: "Punch", damage: [1, 2] }],
     },
-    infernal_cinder: {
-      name: "Infernal Cinder",
-      description: "A fiery elemental being of destruction.",
-      boss: true,
-      hp: { 1: 30, 2: 35, 3: 45, 4: 55 },
-      attacks: [
-        { name: "Wicked Bane", damage: [2, 4], effect: "Reduces damage taken by 1 next turn", cooldown: 2 },
-        { name: "Flesh Rending", damage: [1, 3], effect: "Hits two enemies" },
-        { name: "Cataclysmic Strike", damage: [5, 5], cooldown: 5 },
-      ],
-    },
-    neurovoid: {
-      name: "Neurovoid",
-      description: "An entity that twists reality with its mind.",
-      boss: true,
-      hp: { 1: 30, 2: 35, 3: 45, 4: 60 },
-      attacks: [
-        { name: "Energy Shove", damage: [1, 3], effect: "Hits 2 players" },
-        { name: "Neural Intoxication", damage: [2, 5], isSpecialAttack: true, cooldown: 4 },
-      ],
-    },
    // Add more enemies as needed...
   };
 
