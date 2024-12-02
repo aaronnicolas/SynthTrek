@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
+  background: linear-gradient(135deg, #2b2d42, #8d99ae);
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,7 +12,9 @@ body {
 
 .container {
   text-align: center;
-  background: white;
+  /* background: white; */
+  background-color: #1D1F2B; 
+  color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,7 +28,7 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   color: white;
-  background-color: #007bff;
+  background-color: #30475e;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -33,7 +36,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #2b3f51;
 }
 
 p {
