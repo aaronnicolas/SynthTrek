@@ -112,6 +112,10 @@ body {
   background-color: #893745;  /* Slightly darker yellow for hover */
 }
 
+.attack-option-btn:hover {
+  background-color: #00B5E2;  /* Slightly darker yellow for hover */
+}
+
 .btn-secondary {
   background-color: #30475e;  /* Subtle blue-grey for neutral buttons */
   color: #fff;

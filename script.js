@@ -1,8 +1,12 @@
 function displayAttackFeedback(damage, attack) {
   const damageOutput = document.getElementById("damage-output");
 
-  // Display damage with updated text
-  damageOutput.textContent = `${attack.name} dealt ${damage} damage!`;
+  // Display damage
+  if(attack.isSpecialAttack){
+    damageOutput.textContent = `${attack.name} dealt ${damage} damage to all enemies!`;
+  } else {
+    damageOutput.textContent = `${attack.name} dealt ${damage} damage!`;
+  }
 
   // Add animation classes for the pop effect
   damageOutput.classList.add("pop-animation", "damage-feedback");
@@ -122,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hp: 25,
       attacks: [
         { name: "Mental Rend", damage: [1, 4] },
-        { name: "Binding Will", damage: [2, 3], effect: "Reduces damage taken by 1", cooldown: 2 },
+        { name: "Binding Will", damage: [2, 3], damage: [2, 3], cooldown: 2 },
       ],
     },
     rouge_nexus_machine: {
@@ -131,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hp: 25,
       attacks: [
         { name: "Exo Slam", damage: [1, 3] },
-        { name: "Repulsion Field", damage: [1, 3], effect: "Lowers enemy attack by 1", cooldown: 3 },
+        { name: "Repulsion Field", damage: [1, 3], cooldown: 3 },
       ],
     },
     cyanox_sentry: {
@@ -140,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hp: 30,
       attacks: [
         { name: "Thermal Bolt", damage: [2, 4] },
-        { name: "Barrage", damage: [2, 4], effect: "Hits all enemies", cooldown: 3 },
+        { name: "Barrage", damage: [2, 4], damage: [2, 4], effect: "Hits all enemies", cooldown: 3 },
       ],
     },
     orcish_captive: {
@@ -167,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hp: { 1: 30, 2: 35, 3: 45, 4: 60 },
       attacks: [
         { name: "Energy Shove", damage: [1, 3], effect: "Hits 2 players" },
-        { name: "Neural Intoxication", damage: [2, 5], effect: "Hits all enemies", cooldown: 4 },
+        { name: "Neural Intoxication", damage: [2, 5], isSpecialAttack: true, cooldown: 4 },
       ],
     },
    // Add more enemies as needed...
@@ -190,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     enemy.attacks.forEach((attack) => {
       const button = document.createElement("button");
       button.textContent = attack.name;
-      button.className = "btn btn-primary";
+      button.className = "attack-option-btn";
 
       button.addEventListener("click", () => {
         if (attack.damage) {
@@ -216,6 +220,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial Enemy
   selectRandomEnemy();
 
-  // Re-roll Button
-  rerollButton.addEventListener("click", selectRandomEnemy);
+  rerollButton.addEventListener("click", () => {
+    selectRandomEnemy();
+  
+    // Reset the damage feedback text without modifying CSS
+    damageOutput.textContent = "Choose an attack";
+
+    // Remove any animation or styling classes
+    damageOutput.classList.remove("pop-animation", "damage-feedback");
+  });  
 });
