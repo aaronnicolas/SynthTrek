@@ -125,12 +125,20 @@ body {
   background-color: #2b3f51;  /* Darker shade on hover */
 }
 
+.btn-secondary:active {
+  transform: scale(0.95);
+}
+
 /* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   background-color: #2f3640; /* Dark background for footer */
+}
+
+.btn-primary:active {
+  transform: scale(0.95);  
 }
 
 /* Popup Styles */

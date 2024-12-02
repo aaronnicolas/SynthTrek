@@ -39,6 +39,10 @@ button:hover {
   background-color: #2b3f51;
 }
 
+button:active {
+  transform: scale(0.95);  /* Slight scale effect for feedback */
+}
+
 p {
   font-size: 18px;
   margin: 15px 0;
