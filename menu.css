@@ -141,3 +141,20 @@ ul {
     list-style: none;
 }
 
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .game {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .split {
+        flex: none; /* Reset flex property */
+        width: 100%; /* Make each section take full width */
+        height: auto; /* Allow sections to adjust height naturally */
+    }
+
+    .split.left,
+    .split.right {
+        padding: 20px; /* Add padding for better layout on mobile */
+    }
+}
