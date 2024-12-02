@@ -1,8 +1,15 @@
+@font-face {
+    font-family: 'Kvont'; /* The name you'll use to reference the font */
+    src: url('Kvant-Trial-Bold.ttf') format('truetype'); /* Correct the file format type */
+    font-weight: normal; /* Set the font weight (optional) */
+    font-style: normal;  /* Set the font style (optional) */
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, kvant;
     background-color: #181824; 
 }
 
@@ -20,8 +27,12 @@ body {
 
 /* h1 style */
 .SynthTrek {
-    margin: 0;
+    font-family: 'Kvont', sans-serif; /* Apply the custom Kvont font */
     font-size: 2.5rem;
+}
+
+#title {
+    font-size: 100pt;
 }
 
 /* Style for the split screen */
@@ -166,5 +177,19 @@ ul {
     .split.left,
     .split.right {
         padding: 20px; /* Add padding for better layout on mobile */
+    }
+
+    iframe {
+        display: block; /* Removes inline space */
+        width: 100%; /* Responsive width */
+        height: calc(56.25vw); /* Maintain a 16:9 aspect ratio (popular for videos) */
+        max-height: 500px; /* Constrain height on larger screens */
+        max-width: 900px; /* Constrain width for larger screens */
+        border: none; /* Remove border */
+        margin: 0 auto; /* Center the iframe */
+        padding: 0;
+        border-radius: 15px; /* Smooth corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+        overflow: hidden; /* Ensure content fits within rounded corners */
     }
 }
