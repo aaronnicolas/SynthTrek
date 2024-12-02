@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enemy Attack Generator</title>
+  <link rel="stylesheet" href="enemy.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>⚔️ Enemy Encounter ⚔️</h1>
+    </header>
+
+    <main class="main-content">
+      <!-- Enemy Info Section -->
+      <section class="enemy-section">
+        <h2>Current Enemy</h2>
+        <div id="enemy-display" class="enemy-card">
+          <h3 id="enemy-name">-</h3>
+          <p id="enemy-description">No enemy selected yet.</p>
+        </div>
+        <button id="reroll-enemy" class="btn btn-secondary">Re-roll Enemy</button>
+      </section>
+
+      <!-- Attack Section -->
+      <section class="attack-section">
+        <h2>Choose Your Attack</h2>
+        <div id="attack-options" class="attack-buttons"></div>
+      </section>
+
+      <!-- Output Section -->
+      <section class="output-section">
+        <h2>Attack Damage:</h2>
+        <p id="damage-output" class="output-display">-</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <button class="btn btn-primary" onclick="window.location.href='index.html'">Back to Main Menu</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

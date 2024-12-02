@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enemy Selector</title>
+  <link rel="stylesheet" href="enemytype.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Select Enemy Type</h1>
+    <button onclick="redirectToEnemy('Normal')">Normal</button>
+    <button onclick="redirectToEnemy('Mini-boss')">Mini-boss</button>
+    <button onclick="redirectToEnemy('Boss')">Boss</button>
+  </div>
+  <script>
+    function redirectToEnemy(type) {
+      localStorage.setItem('enemyType', type); // Store the selected enemy type
+      window.location.href = 'enemy.html'; // Redirect to the enemy page
+    }
+  </script>
+</body>
+</html>
