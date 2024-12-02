@@ -51,15 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Squirm", damage: [2, 3], cooldown: 2 },
       ],
     },
-    cyclops: {
-      name: "Cyclops",
-      description: "A one-eyed brute with immense strength.",
-      hp: 30,
-      attacks: [
-        { name: "Stab", damage: [1, 3] },
-        { name: "Lunge", damage: [2, 4], cooldown: 2 },
-      ],
-    },
     veldraxi: {
       name: "Veldraxi",
       description: "A stealthy creature with deadly pincers.",
@@ -87,29 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Fear Factor", effect: "Reduces damage taken by 1" },
       ],
     },
-    infected_wretch: {
-      name: "Infected Wretch",
-      description: "A diseased creature spreading decay.",
-      hp: 30,
-      attacks: [
-        { name: "Lunge", damage: [2, 4] },
-        { name: "Vomit", effect: "Decreases enemy attack by 2", cooldown: 3 },
-      ],
-    },
     vile_abomination: {
       name: "Vile Abomination",
       description: "A twisted fusion of organic and mechanical parts.",
       hp: 10,
       attacks: [{ name: "Bite", damage: [1, 2] }],
-    },
-    ravaging_phantasmals: {
-      name: "Ravaging Phantasmals",
-      description: "Ethereal entities spreading chaos.",
-      hp: 25,
-      attacks: [
-        { name: "Screech", damage: [1, 3] },
-        { name: "Haunt", effect: "Reduces all enemy attack by 1" },
-      ],
     },
     expurge: {
       name: "Expurge",
@@ -129,15 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Binding Will", damage: [2, 3], damage: [2, 3], cooldown: 2 },
       ],
     },
-    rouge_nexus_machine: {
-      name: "Rogue Nexus Machine",
-      description: "A corrupted machine from a distant future.",
-      hp: 25,
-      attacks: [
-        { name: "Exo Slam", damage: [1, 3] },
-        { name: "Repulsion Field", damage: [1, 3], cooldown: 3 },
-      ],
-    },
     cyanox_sentry: {
       name: "Cyanox Sentry",
       description: "A sentinel armed with advanced weaponry.",
@@ -146,12 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Thermal Bolt", damage: [2, 4] },
         { name: "Barrage", damage: [2, 4], damage: [2, 4], effect: "Hits all enemies", cooldown: 3 },
       ],
-    },
-    orcish_captive: {
-      name: "Orcish Captive",
-      description: "A battered and bruised orc prisoner.",
-      hp: 15,
-      attacks: [{ name: "Punch", damage: [1, 2] }],
     },
    // Add more enemies as needed...
   };
