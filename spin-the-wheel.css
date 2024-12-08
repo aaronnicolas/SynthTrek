@@ -116,7 +116,6 @@ li {
 
 .back-to-main-menu button {
   margin-top: 50px;
-  height: 5vh;
   background-color: #3f54d1;
   color: white;
   border: none;
@@ -125,6 +124,7 @@ li {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
+  white-space: nowrap; /* Ensure text does not wrap */
 }
 
 .back-to-main-menu button:hover {
