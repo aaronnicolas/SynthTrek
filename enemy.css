@@ -48,7 +48,14 @@ body {
   margin-bottom: 10px;
 }
 
-.enemy-section h2, .attack-section h2 {
+#player-count {
+  background-color: white;
+  color: black;
+}
+
+.player-section h2,
+.enemy-section h2, 
+.attack-section h2 {
   margin-bottom: 10px;
 }
 
