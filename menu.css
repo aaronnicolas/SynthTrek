@@ -81,21 +81,44 @@ body {
     font-size: 30px;
 }
 
+a {
+    text-decoration: none; /* Remove underline from all <a> elements */
+}
+
 button {
+    display: flex;
+    align-items: center;         /* Centers content vertically */
+    justify-content: center;     /* Centers content horizontally */
     background-color: #3D3F54;
-    font-size: 50px;
     color: #E0E0E0;
     padding: 12px 24px;
     font-size: 16px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    width: 200px;           /* Set a fixed width for all buttons */
+    width: 200px;
+    height: 80px;                /* Adjusted button height */
     transition: background-color 0.3s, transform 0.3s;
     text-overflow: ellipsis;
     white-space: normal;
     overflow: hidden;
     word-wrap: break-word;
+    line-height: 1.5;            /* Adjust line height to space out text */
+}
+
+button img.button-icon {
+    width: 20px;                /* Set icon width */
+    height: 20px;               /* Set icon height */
+    margin-right: 10px;         /* Space between icon and text */
+    display: inline-block;
+    vertical-align: middle;     /* Ensure the icon aligns in the middle */
+}
+
+button span {
+    display: inline-flex;
+    flex-direction: column;     /* Stack text content */
+    justify-content: center;    /* Align text vertically */
+    align-items: center;        /* Align text horizontally */
 }
 
 button:hover {
