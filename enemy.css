@@ -7,14 +7,14 @@
 }
 
 body {
-  background: linear-gradient(135deg, #2b2d42, #8d99ae);  /* Deep blue with soft accent gradient for calmness */
+  background: linear-gradient(135deg, #2b2d42, #8d99ae);
+  background-color: linear-gradient(135deg, #2b2d42, #8d99ae);  /* Deep blue with soft accent gradient for calmness */
   color: #f0f1f6;  /* Light gray for text, ensuring high contrast */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  overflow: hidden;
 }
 
 /* Container */
