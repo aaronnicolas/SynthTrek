@@ -58,7 +58,7 @@ body {
 }
 
 .split.right {
-    background-color: #0092ca; /* Light gray background for right side */
+    background: linear-gradient(to bottom right, #1f3c88, #2ed9e9); /* Light gray background for right side */
     display: flex;
     justify-content: center;
     align-items: center;
