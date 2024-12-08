@@ -209,7 +209,7 @@ body {
   }
 
   .container {
-    margin: 10px;  /* Padding around the container */
+    /* margin: 10px;  Padding around the container */
     width: 100%;
     max-width: none;
     margin-top: 0;
