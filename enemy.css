@@ -234,6 +234,10 @@ body {
     font-size: 1.1rem;  /* Slightly smaller header text */
   }
 
+  #player-count {
+    width: 30%;
+  }
+
   .enemy-section,
   .attack-section,
   .output-section {
