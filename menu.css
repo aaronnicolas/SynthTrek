@@ -71,7 +71,10 @@ body {
 }
 
 .play-option {
-    display: block;
+    display: flex;          /* Use flexbox for layout */
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center;    /* Center the buttons horizontally */
+    gap: 10px;              /* Add space between buttons */
 }
 
 #Start {
@@ -87,14 +90,12 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    flex: 1 1 48%;
+    width: 200px;           /* Set a fixed width for all buttons */
     transition: background-color 0.3s, transform 0.3s;
-    min-width: 120px; 
-    max-width: 220px; 
-    text-overflow: ellipsis; 
-    white-space: normal; 
-    overflow: hidden; 
-    word-wrap: break-word; 
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 button:hover {
