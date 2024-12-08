@@ -212,7 +212,6 @@ body {
     margin: 10px;  /* Padding around the container */
     width: 100%;
     max-width: none;
-    min-height: 100vh; /* Ensure the container fully fills the viewport height */
   }
 
   .header h1 {
