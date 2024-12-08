@@ -212,6 +212,7 @@ body {
     margin: 10px;  /* Padding around the container */
     width: 100%;
     max-width: none;
+    margin-top: 0;
   }
 
   .header h1 {
