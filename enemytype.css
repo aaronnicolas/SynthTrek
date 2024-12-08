@@ -49,20 +49,20 @@ p {
 }
 
 .btn-primary {
-  background-color: #FF5B77;  /* Soft yellow for primary action */
+  background-color: #FF5B77; 
   /* color: #2f3640; */
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #893745;  /* Slightly darker yellow for hover */
+  background-color: #893745;  
 }
 
 .btn-secondary {
-  background-color: #30475e;  /* Subtle blue-grey for neutral buttons */
+  background-color: #30475e; 
   color: #fff;
 }
 
 .btn-secondary:hover {
-  background-color: #2b3f51;  /* Darker shade on hover */
+  background-color: #2b3f51; 
 }

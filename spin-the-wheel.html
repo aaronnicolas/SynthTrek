@@ -3,36 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spin the Wheel game with detailed event outcomes">
     <title>Spin the Wheel</title>
+    <link href="https://fonts.googleapis.com/css2?family=HK+Modular&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="spin-the-wheel.css">
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Spin the Wheel</h1>
-            <br>
-            <Test>Looks like you stepped on an Event Tile! <br>Test your luck and reveal exciting events!</p>
-            <br>
-        </header>
+    <header>
+        <h1>Spin the Wheel</h1>
+        <p>Test your luck and reveal your team's event!</p>
+    </header>
 
-        <div class="wheel-container">
-            <div class="wheel" id="wheel" aria-label="Wheel of events"></div>
-            <div class="pointer" aria-hidden="true"></div>
-        </div>
+    <fieldset class="ui-wheel-of-fortune">
+        <ul>
+          <li>Cosmic Anomaly</li>
+          <li>Collapsing Star</li>
+          <li>Awakening</li>
+          <li>Callousness</li>
+          <li>Discovery</li>
+          <li>Alert</li>
+          <li>Anxiety</li>
+          <li>Rampage</li>
+          <li>Guards</li>
+        </ul>
+        <button type="button">SPIN</button>
+    </fieldset>
 
-        <button id="spinButton" aria-label="Spin the wheel">Spin the Wheel</button>
-
-        <div id="modal" class="modal" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <h2 id="eventTitle"></h2>
-                <p id="eventDescription"></p>
-                <ul id="eventOutcomes"></ul>
-                <button id="closeModal" aria-label="Close">Close</button>
-            </div>
-        </div>
-    </main>
-
+    <div class="back-to-main-menu">
+        <button onclick="window.location.href='index.html'">Back to Main Menu</button>
+    </div>
     <script src="spin-the-wheel.js"></script>
 </body>
 </html>

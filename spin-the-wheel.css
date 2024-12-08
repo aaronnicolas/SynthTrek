@@ -1,150 +1,144 @@
-/* General Styles */
-body {
-    font-family: 'Kvant', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1d1f27;
-    color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+/* Global settings */
+* {
+  box-sizing: border-box;
 }
 
-main {
-    text-align: center;
+body {
+  font-family: system-ui, sans-serif;
+  padding: 5cqi;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the body takes full viewport height */
+  margin: 0; /* Remove default margin to prevent overflow */
+  background: linear-gradient(to bottom right, #1f3c88, #2ed9e9); /* Dark blue to teal gradient */
 }
 
 header h1 {
-    font-size: 2rem;
-    margin: 0;
+  font-family: 'HK Modular', sans-serif;
+  /* margin-top: 50px; */
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
 
 header p {
-    font-size: 1rem;
-    color: #aaa;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Wheel Styles */
-.wheel-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 20px auto;
+/* Wheel of Fortune Styles */
+:where(.ui-wheel-of-fortune) {
+  --_items: 9;
+  all: unset;
+  aspect-ratio: 1 / 1;
+  container-type: inline-size;
+  direction: ltr;
+  display: grid;
+  position: relative;
+  width: 40%;
+  margin: auto; /* Ensure horizontal centering */
+  place-self: center; /* Vertical centering in flex context */
+  /* border: 10px dotted #fff;
+  border-radius: 50%; */
+  /* box-shadow: 0 0 10px rgba(255, 165, 10, 0.997); */
+  border: 10px solid #fff; /* Outline added to the wheel */
+  border-radius: 50%; /* Circular border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-.wheel {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 5px solid #444;
-    background: conic-gradient(
-        #f39c12 0% 12.5%, 
-        #e74c3c 12.5% 25%, 
-        #3498db 25% 37.5%, 
-        #2ecc71 37.5% 50%, 
-        #9b59b6 50% 62.5%, 
-        #e67e22 62.5% 75%, 
-        #1abc9c 75% 87.5%, 
-        #e84393 87.5% 100%
-    );
-    transform-origin: center;
-    transition: transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+.ui-wheel-of-fortune::after {
+  aspect-ratio: 1 / cos(30deg);
+  background-color: #68e0b5;
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  content: "";
+  height: 4cqi;
+  position: absolute;
+  place-self: start center;
+  scale: 1.4;
 }
 
-.pointer {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 40px;
-    background: #f5f5f5;
-    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+.ui-wheel-of-fortune > * {
+  position: absolute;
 }
 
-/* Button Styles */
 button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #f39c12;
-    color: #1d1f27;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+  aspect-ratio: 1 / 1;
+  background: white;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 4cqi;
+  place-self: center;
+  width: 15cqi;
+  font-weight: bold;
 }
 
-button:hover,
-button:focus {
-    background-color: #e67e22;
-    transform: scale(1.05);
+button:active {
+  transform: scale(0.95);  /* Slight scale effect for feedback */
 }
 
-button:disabled {
-    background-color: #555;
-    cursor: not-allowed;
+ul {
+  all: unset;
+  clip-path: inset(0 0 0 0 round 50%);
+  display: grid;
+  inset: 0;
+  place-content: center start;
 }
 
-/* Modal Styles */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+/* Wheel Segment Colors */
+li {
+  align-content: center;
+  aspect-ratio: 1 / calc(2 * tan(180deg / var(--_items)));
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  display: grid;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.7); Stronger text shadow for better contrast */
+  grid-area: 1 / -1;
+  padding-left: 2ch;
+  rotate: calc(360deg / var(--_items) * calc(var(--_idx) - 1));
+  transform-origin: center right;
+  user-select: none;
+  width: 50cqi;
 }
 
-.modal.active {
-    opacity: 1;
-    pointer-events: all;
+.back-to-main-menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.modal-content {
-    background: #1d1f27;
-    color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 400px;
+.back-to-main-menu button {
+  margin-top: 50px;
+  height: 5vh;
+  background-color: #3f54d1;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.modal-content h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
+.back-to-main-menu button:hover {
+  background-color: #293992;
 }
 
-.modal-content ul {
-    text-align: left;
-    padding: 0;
-    list-style: none;
-}
+/* Softer Neon Segment Colors */
+li:nth-of-type(1) { --_idx: 1; background-color: #D32F2F; } /* Red (Muted) */
+li:nth-of-type(2) { --_idx: 2; background-color: #F57C00; } /* Orange (Muted) */
+li:nth-of-type(3) { --_idx: 3; background-color: #FFEB3B; } /* Soft Yellow */
+li:nth-of-type(4) { --_idx: 4; background-color: #388E3C; } /* Green (Muted) */
+li:nth-of-type(5) { --_idx: 5; background-color: #0288D1; } /* Light Blue (Muted) */
+li:nth-of-type(6) { --_idx: 6; background-color: #1976D2; } /* Blue */
+li:nth-of-type(7) { --_idx: 7; background-color: #512DA8; } /* Purple */
+li:nth-of-type(8) { --_idx: 8; background-color: #C2185B; } /* Pink */
+li:nth-of-type(9) { --_idx: 9; background-color: #FBC02D; } /* Golden Yellow */
 
-.modal-content ul li {
-    margin: 10px 0;
-}
-
-.wheel .segment {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-    transform-origin: center bottom;
-}
-
-.wheel .segment div {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
-    font-family: 'Kvant', sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-}
