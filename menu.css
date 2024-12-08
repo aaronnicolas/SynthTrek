@@ -48,7 +48,7 @@ body {
     align-items: stretch;
     height: 100vh;
     width: 100%; /* Ensure the game container takes full width */
-    overflow: hidden; /* Prevent any overflow */
+    /* overflow: hidden; Prevent any overflow */
 }
 
 .split {
