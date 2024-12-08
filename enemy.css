@@ -44,6 +44,14 @@ body {
   padding: 20px;
 }
 
+.player-section {
+  margin-bottom: 10px;
+}
+
+.enemy-section h2, .attack-section h2 {
+  margin-bottom: 10px;
+}
+
 .enemy-section,
 .attack-section {
   margin-bottom: 20px;
