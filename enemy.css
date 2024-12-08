@@ -42,7 +42,6 @@ body {
 /* Main Content */
 .main-content {
   padding: 20px;
-  flex-grow: 1;
 }
 
 .enemy-section,
