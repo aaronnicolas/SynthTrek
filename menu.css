@@ -257,9 +257,11 @@ ul {
 
     button {
         width: 100%; /* Make buttons full-width on mobile */
-        max-width: 300px; /* Set a maximum width */
+        max-width: 100%; /* Ensure buttons do not exceed the available width */
         height: 60px; /* Reduce height for mobile */
         font-size: 14px; /* Adjust font size */
+        margin: 0 auto; /* Center align buttons */
+        padding: 12px; /* Adjust padding for a better button layout */
     }
 
     .rule-book {
