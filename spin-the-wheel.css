@@ -76,6 +76,7 @@ button {
   place-self: center;
   width: 15cqi;
   font-weight: bold;
+  white-space: nowrap; /* Ensure text does not wrap */
 }
 
 button:active {
