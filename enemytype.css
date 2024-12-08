@@ -66,3 +66,30 @@ p {
 .btn-secondary:hover {
   background-color: #2b3f51; 
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+  body {
+    padding: 10px; /* Ensure there's some space around the container */
+  }
+
+  .container {
+    padding: 30px 15px; /* Reduce padding for mobile */
+    max-width: 90%; /* Ensure the container fits within the screen width */
+  }
+
+  h1 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  button {
+    font-size: 0.9rem; /* Reduce button font size */
+    padding: 8px 12px; /* Adjust button padding */
+    width: 100%; /* Buttons stretch to full width */
+    max-width: none; /* Remove max-width for buttons */
+  }
+
+  .footer {
+    margin-top: 15px; /* Adjust footer spacing */
+  }
+}
