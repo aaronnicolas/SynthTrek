@@ -74,7 +74,7 @@ p {
   }
 
   .container {
-    padding: 30px 15px; /* Reduce padding for mobile */
+    /* padding: 30px 15px; Reduce padding for mobile */
     max-width: 90%; /* Ensure the container fits within the screen width */
   }
 
