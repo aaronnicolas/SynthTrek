@@ -222,7 +222,12 @@ body {
   .output-section {
     /* padding: 10px; */
     margin-top: 5px;
-    margin-bottom: 5px;
+  }
+
+  .enemy-section h2,
+  .attack-section h2,
+  .output-section h2 {
+    margin-bottom: 3px;
   }
 
   .attack-buttons {
