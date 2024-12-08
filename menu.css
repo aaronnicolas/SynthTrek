@@ -230,13 +230,13 @@ ul {
 
     .split {
         width: 100%; /* Each section takes full width */
-        padding: 20px; /* Add consistent padding */
+        padding: 35px; /* Add consistent padding */
         text-align: center; /* Center-align text */
     }
 
     .split.left,
     .split.right {
-        padding: 20px; /* Equalize spacing */
+        padding: 35px; /* Equalize spacing */
     }
 
     .centered {
