@@ -1,14 +1,8 @@
 @font-face {
-    font-family: 'Kvont';
-    src: url('Kvant-Trial-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box; /* Ensure padding and borders are included in width/height calculations */
+    font-family: 'Kvont'; /* The name you'll use to reference the font */
+    src: url('Kvant-Trial-Bold.ttf') format('truetype'); /* Correct the file format type */
+    font-weight: normal; /* Set the font weight (optional) */
+    font-style: normal;  /* Set the font style (optional) */
 }
 
 body {
@@ -16,24 +10,24 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, kvant;
-    background-color: #181824;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #181824; 
 }
 
 .main-title {
     color: #00B5E2;
     height: 100vh;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
     padding: 20px 0;
     position: center;
     z-index: 1;
     display: flex;
 }
 
+/* h1 style */
 .SynthTrek {
-    font-family: 'Kvont', sans-serif;
+    font-family: 'Kvont', sans-serif; /* Apply the custom Kvont font */
     font-size: 2.5rem;
 }
 
@@ -41,44 +35,46 @@ body {
     font-size: 100pt;
 }
 
+/* Style for the split screen */
 .game {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    height: 100vh;
-    width: 100%; /* Ensure the game container takes full width */
-    /* overflow: hidden; Prevent any overflow */
+    height: 100vh; /* Full viewport height for split screen */
 }
 
 .split {
-    flex: 1;
-    overflow: hidden; /* Prevent horizontal overflow */
+    flex: 1; /* Equal width for left and right sections */
+    overflow: auto; /* Handle overflow content */
+}
+
+.split.left {
+    background-color: #2e3238; 
+    color: #E0E0E0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.split.left {
-    background-color: #2e3238;
-    color: #E0E0E0;
-}
-
 .split.right {
-    background: linear-gradient(to bottom right, #1f3c88, #2ed9e9);
+    background: linear-gradient(to bottom right, #1f3c88, #2ed9e9); /* Light gray background for right side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .centered {
     text-align: center;
-    max-width: 100%; /* Ensure content width does not exceed the viewport */
+    max-width: 80%; /* Control content width */
     margin: auto;
 }
 
 .play-option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    display: flex;          /* Use flexbox for layout */
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center;    /* Center the buttons horizontally */
+    gap: 10px;              /* Add space between buttons */
 }
 
 #Start {
@@ -86,13 +82,13 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from all <a> elements */
 }
 
 button {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;         /* Centers content vertically */
+    justify-content: center;     /* Centers content horizontally */
     background-color: #3D3F54;
     color: #E0E0E0;
     padding: 12px 24px;
@@ -101,33 +97,33 @@ button {
     border-radius: 8px;
     cursor: pointer;
     width: 200px;
-    height: 80px;
+    height: 80px;                /* Adjusted button height */
     transition: background-color 0.3s, transform 0.3s;
     text-overflow: ellipsis;
     white-space: normal;
     overflow: hidden;
     word-wrap: break-word;
-    line-height: 1.5;
+    line-height: 1.5;            /* Adjust line height to space out text */
 }
 
 button img.button-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 20px;                /* Set icon width */
+    height: 20px;               /* Set icon height */
+    margin-right: 10px;         /* Space between icon and text */
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: middle;     /* Ensure the icon aligns in the middle */
 }
 
 button span {
     display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;     /* Stack text content */
+    justify-content: center;    /* Align text vertically */
+    align-items: center;        /* Align text horizontally */
 }
 
 button:hover {
     background-color: #00B5E2;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
 button:disabled {
@@ -148,40 +144,38 @@ p {
 
 .rule-book {
     position: center;
-    background-color: #181824;
+    background-color: #181824; 
     color: #E0E0E0;
     justify-content: center;
 }
 
 iframe {
-    display: block;
-    width: 100%; /* Ensure iframe scales within container */
-    max-width: 900pt; /* Limit iframe size for large screens */
-    height: 500pt;
-    border: none;
-    margin: 0;
+    display: block; /* Removes inline space */
+    width: 900pt; /* Full viewport width */
+    height: 500pt; /* Full viewport height */
+    border: none; /* Remove border */
+    margin: 0; /* Prevent any additional margin */
     padding: 0;
     border-radius: 15px;
 }
-
 .rule-book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #181824;
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background-color: #181824; 
     color: #E0E0E0;
-    padding: 20px;
+    padding: 20px; /* Base padding for spacing */
 }
 
 .rule-book iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
+    display: block;
+    width: 900pt; /* Default to full width */
+    height: 500pt; /* Fixed height for desktop */
+    border: none; 
     border-radius: 15px;
-    margin: 20px 0;
+    margin: 20px 0; 
 }
-
 .credits {
     background-color: #2e3238;
     color: #E0E0E0;
@@ -215,91 +209,90 @@ ul {
 
 @media (max-width: 768px) {
     body {
-        font-size: 14px;
-        padding: 10px;
-        overflow-x: hidden;
+        font-size: 14px; /* Adjust base font size for readability on smaller screens */
+        padding: 10px; /* Add padding for mobile layout */
     }
 
     .main-title {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center-align text */
         padding: 20px;
     }
 
     #title {
-        font-size: 40px;
+        font-size: 40px; /* Reduce title size for mobile */
     }
 
     .game {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        overflow: hidden; /* Prevent horizontal overflow */
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center-align sections */
     }
 
     .split {
-        width: 100%;
-        padding: 35px;
-        text-align: center;
+        width: 100%; /* Each section takes full width */
+        padding: 35px; /* Add consistent padding */
+        text-align: center; /* Center-align text */
     }
 
     .split.left,
     .split.right {
-        padding: 35px;
+        padding: 35px; /* Equalize spacing */
     }
 
     .centered {
-        max-width: 100%;
+        max-width: 100%; /* Full width for mobile */
         margin: auto;
     }
 
     p {
-        font-size: 16px;
-        line-height: 1.6;
-        padding: 10px 15px;
-        text-align: justify;
+        font-size: 16px; /* Reduce paragraph font size for readability */
+        line-height: 1.6; /* Adjust line height for better spacing */
+        padding: 10px 15px; /* Adjust padding for mobile */
+        text-align: justify; /* Justify text for cleaner look */
     }
 
     .play-option {
-        gap: 15px;
+        gap: 15px; /* Add some spacing between buttons */
     }
 
     button {
-        width: 100%;
-        max-width: 300px;
-        height: 60px;
-        font-size: 14px;
+        width: 100%; /* Make buttons full-width on mobile */
+        max-width: 300px; /* Set a maximum width */
+        height: 60px; /* Reduce height for mobile */
+        font-size: 14px; /* Adjust font size */
     }
 
     .rule-book {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #181824;
+        display: flex; /* Use Flexbox for centering */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align horizontally */
+        justify-content: center; /* Center align vertically */
+        background-color: #181824; 
         color: #E0E0E0;
-        padding: 20px;
+        padding: 20px; /* Add padding for better spacing */
     }
-
+    
     .rule-book iframe {
-        width: 100%;
-        height: 500px;
-        border: none;
-        border-radius: 15px;
-        margin: 20px 0;
+        display: block; /* Ensure block display for centering */
+        width: 100%; /* Responsive width */
+        height: 500px; /* Fixed height */
+        border: none; /* Remove border */
+        border-radius: 15px; /* Smooth corners */
+        margin: 20px 0; /* Add vertical spacing */
     }
+    
 
     .credits {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+        flex-direction: column; /* Stack credit sections vertically */
+        align-items: center; /* Center-align content */
+        padding: 20px; /* Add padding */
     }
 
     .producer,
     .left-side-credits,
     .right-side-credits {
-        width: 100%;
+        width: 100%; /* Full width on mobile */
         text-align: center;
     }
 }
