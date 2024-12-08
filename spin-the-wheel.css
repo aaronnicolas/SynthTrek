@@ -142,3 +142,31 @@ li:nth-of-type(7) { --_idx: 7; background-color: #512DA8; } /* Purple */
 li:nth-of-type(8) { --_idx: 8; background-color: #C2185B; } /* Pink */
 li:nth-of-type(9) { --_idx: 9; background-color: #FBC02D; } /* Golden Yellow */
 
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Adjust wheel size and button for smaller screens */
+  .ui-wheel-of-fortune {
+    width: 80vw; /* Make the wheel take 80% of the screen width */
+  }
+
+  button {
+    width: 10cqi; /* Reduce the button size */
+    font-size: 3cqi; /* Reduce font size */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Reduce header font size on mobile */
+  }
+
+  header p {
+    font-size: 1rem; /* Reduce paragraph font size */
+    margin-bottom: 20px;
+  }
+
+  .back-to-main-menu button {
+    height: 5vh;
+    font-size: 0.8rem; /* Adjust font size for mobile */
+  }
+}
+
