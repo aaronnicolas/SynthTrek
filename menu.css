@@ -5,6 +5,12 @@
     font-style: normal;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height calculations */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -41,6 +47,8 @@ body {
     justify-content: center;
     align-items: stretch;
     height: 100vh;
+    width: 100%; /* Ensure the game container takes full width */
+    overflow: hidden; /* Prevent any overflow */
 }
 
 .split {
@@ -62,7 +70,7 @@ body {
 
 .centered {
     text-align: center;
-    max-width: 80%;
+    max-width: 100%; /* Ensure content width does not exceed the viewport */
     margin: auto;
 }
 
@@ -224,6 +232,8 @@ ul {
     .game {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        overflow: hidden; /* Prevent horizontal overflow */
     }
 
     .split {
