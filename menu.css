@@ -158,7 +158,24 @@ iframe {
     padding: 0;
     border-radius: 15px;
 }
+.rule-book {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    background-color: #181824; 
+    color: #E0E0E0;
+    padding: 20px; /* Base padding for spacing */
+}
 
+.rule-book iframe {
+    display: block;
+    width: 900pt; /* Default to full width */
+    height: 500pt; /* Fixed height for desktop */
+    border: none; 
+    border-radius: 15px;
+    margin: 20px 0; 
+}
 .credits {
     background-color: #2e3238;
     color: #E0E0E0;
@@ -190,7 +207,6 @@ ul {
     list-style: none;
 }
 
-/* Responsive design for mobile */
 @media (max-width: 768px) {
     body {
         font-size: 14px; /* Adjust base font size for readability on smaller screens */
