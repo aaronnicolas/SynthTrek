@@ -213,7 +213,7 @@ body {
     max-width: none;
   }
 
-  .header {
+  .header h1 {
     font-size: 1rem;  /* Slightly smaller header text */
   }
 
