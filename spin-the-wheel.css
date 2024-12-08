@@ -166,6 +166,7 @@ li:nth-of-type(9) { --_idx: 9; background-color: #FBC02D; } /* Golden Yellow */
 
   .back-to-main-menu button {
     height: 5vh;
+    width: auto;
     font-size: 0.8rem; /* Adjust font size for mobile */
   }
 }
