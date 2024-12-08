@@ -170,7 +170,7 @@ li:nth-of-type(9) { --_idx: 9; background-color: #FBC02D; } /* Golden Yellow */
   }
 
   li {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .back-to-main-menu button {
