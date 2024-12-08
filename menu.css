@@ -256,7 +256,7 @@ ul {
     }
 
     button {
-        width: 150px; /* Make buttons full-width on mobile */
+        width: 200px; /* Make buttons full-width on mobile */
         /* max-width: 100%; Ensure buttons do not exceed the available width */
         height: 60px; /* Reduce height for mobile */
         font-size: 14px; /* Adjust font size */
