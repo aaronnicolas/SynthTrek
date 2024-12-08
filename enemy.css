@@ -220,7 +220,8 @@ body {
   .enemy-section,
   .attack-section,
   .output-section {
-    padding: 10px;
+    /* padding: 10px; */
+    margin-top: 5px;
   }
 
   .attack-buttons {
