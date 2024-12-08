@@ -17,7 +17,7 @@ body {
 header h1 {
   font-family: 'HK Modular', sans-serif;
   /* margin-top: 50px; */
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0;
   text-align: center;
   color: white;
@@ -25,7 +25,7 @@ header h1 {
 }
 
 header p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
   text-align: center;
   margin-bottom: 40px;
@@ -53,7 +53,7 @@ header p {
 
 .ui-wheel-of-fortune::after {
   aspect-ratio: 1 / cos(30deg);
-  background-color: #68e0b5;
+  background-color: white;
   clip-path: polygon(50% 100%, 100% 0, 0 0);
   content: "";
   height: 4cqi;
