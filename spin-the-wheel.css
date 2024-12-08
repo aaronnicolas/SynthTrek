@@ -164,6 +164,10 @@ li:nth-of-type(9) { --_idx: 9; background-color: #FBC02D; } /* Golden Yellow */
     margin-bottom: 20px;
   }
 
+  li {
+    font-size: 0.5rem;
+  }
+
   .back-to-main-menu button {
     height: 5vh;
     width: auto;
