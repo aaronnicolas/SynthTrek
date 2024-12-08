@@ -203,40 +203,74 @@ body {
 }
 
 /* Media Queries for Responsiveness */
-/* Mobile Adjustments */
 @media (max-width: 767px) {
   body {
-    font-size: 14px;
+    font-size: 14px;  /* Slightly smaller font size for mobile */
   }
 
   .container {
-    min-height: calc(100dvh - 20px); /* Use dynamic viewport height for better mobile support */
-    margin: 10px; /* Add breathing room */
+    margin: 10px;  /* Padding around the container */
+    width: 100%;
+    max-width: none;
+  }
+
+  .header h1 {
+    font-size: 1.1rem;  /* Slightly smaller header text */
+  }
+
+  .enemy-section,
+  .attack-section,
+  .output-section {
+    /* padding: 10px; */
+    margin-top: 5px;
+  }
+
+  .enemy-section h2,
+  .attack-section h2,
+  .output-section h2 {
+    margin-bottom: 3px;
   }
 
   .attack-buttons {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller button sizes */
   }
 
   .attack-buttons button {
-    font-size: 1rem;
-    height: 45px;
+    font-size: 1rem; /* Slightly smaller button text */
+    height: 45px;  /* Adjust button height for smaller screens */
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Slightly smaller button text */
+  }
+
+  .output-display {
+    font-size: 1.3rem; /* Adjusted size for better readability */
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    font-size: 1rem;
+    font-size: 1rem; /* Even smaller for small screens */
   }
 
   .attack-buttons button {
-    font-size: 0.9rem;
-    height: 40px;
+    font-size: 0.9rem; /* Reduce button font size for mobile */
+    height: 40px; /* Adjust button height */
   }
 
   .footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .btn {
+    width: 100%;  /* Buttons stretch to full width */
+    margin-bottom: 10px; /* Space between buttons */
+  }
+
+  .output-display {
+    font-size: 1.2rem; /* Adjust output text size */
   }
 }
