@@ -275,8 +275,7 @@ ul {
     .rule-book iframe {
         display: block; /* Ensure block display for centering */
         width: 100%; /* Responsive width */
-        max-width: 900px; /* Limit maximum width */
-        height: 500px; /* Fixed height */
+        height: 100vh; /* Fixed height */
         border: none; /* Remove border */
         border-radius: 15px; /* Smooth corners */
         margin: 20px 0; /* Add vertical spacing */
