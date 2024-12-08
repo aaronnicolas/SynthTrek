@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
@@ -70,7 +70,7 @@ p {
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
   body {
-    padding: 10px; /* Ensure there's some space around the container */
+    padding: 0; /* Ensure there's some space around the container */
     justify-content: center;
     align-items: center;
   }
