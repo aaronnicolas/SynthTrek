@@ -199,8 +199,13 @@ function wheelOfFortune(selector) {
   let animation;
   let previousEndDegree = 0;
 
+  const spinSound = new Audio('./audio/spin-the-wheel-sound-effect.mp3');
+  const resultSound = new Audio('audio/result-sound.mp3');
+
   spin.addEventListener('click', () => {
     if (animation) animation.cancel(); // Reset the animation if it already exists
+
+    spinSound.play();
 
     const randomAdditionalDegrees = Math.random() * 360 + 1800;
     const newEndDegree = previousEndDegree + randomAdditionalDegrees;
@@ -219,6 +224,8 @@ function wheelOfFortune(selector) {
     previousEndDegree = newEndDegree;
 
     animation.onfinish = () => {
+      resultSound.play();
+
       const finalAngle = newEndDegree % 360;
       const normalizedAngle = (360 - finalAngle + 90) % 360;
       const items = wheel.children.length;

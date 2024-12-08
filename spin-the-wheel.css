@@ -126,6 +126,7 @@ li {
   cursor: pointer;
   transition: background-color 0.2s;
   white-space: nowrap; /* Ensure text does not wrap */
+  height: 50px;
 }
 
 .back-to-main-menu button:hover {
