@@ -3,7 +3,7 @@ function displayAttackFeedback(damage, attack) {
 
   // Display damage
   if(attack.isSpecialAttack){
-    damageOutput.textContent = `${attack.name} dealt ${damage} damage to all enemies!`;
+    damageOutput.textContent = `${attack.name} heals by damage done by ${damage}`;
   } else {
     damageOutput.textContent = `${attack.name} dealt ${damage} damage!`;
   }
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hp: 30,
       attacks: [
         { name: "Thought Shatter", damage: [2, 4] },
-        { name: "Cognitive Recoil", effect: "Heals by damage done (1 to 5)", cooldown: 4 },
+        { name: "Cognitive Recoil", damage: [1,5], isSpecialAttack:true, cooldown: 4 },
       ],
     },
     eye_from_faraway: {
